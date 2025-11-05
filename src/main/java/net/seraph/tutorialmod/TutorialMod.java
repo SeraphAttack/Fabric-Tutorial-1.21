@@ -3,6 +3,7 @@ package net.seraph.tutorialmod;
 import net.fabricmc.api.ModInitializer;
 
 import net.seraph.tutorialmod.block.ModBlocks;
+import net.seraph.tutorialmod.item.ModItemGroups;
 import net.seraph.tutorialmod.item.ModItems;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -13,6 +14,8 @@ public class TutorialMod implements ModInitializer {
 
 	@Override
 	public void onInitialize() {
+        ModItemGroups.registerItemGroups();
+
         ModItems.registerModItems();
         ModBlocks.registerModBlocks();
 	}
