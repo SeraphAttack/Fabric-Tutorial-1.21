@@ -17,5 +17,14 @@
   "block.tutorialmod.magic_block": "Magic Block",
 
   "itemgroup.tutorialmod.pink_garnet_items": "Pink Garnet Items",
-  "itemgroup.tutorialmod.pink_garnet_blocks": "Pink Garnet Blocks"
+  "itemgroup.tutorialmod.pink_garnet_blocks": "Pink Garnet Blocks",
+
+  "tooltip.tutorialmod.magic_block.tooltip": "Use this block to covert §dRaw Pink Garnet§r into §dPink Garnet§r",
+  "tooltip.tutorialmod.chisel.tooltip": "Use this item to convert blocks into alternative block types",
+  "tooltip.tutorialmod.chisel.tooltip.1": "§8Press SHIFT for more information§r",
+
+  "tooltip.tutorialmod.chisel.tooltip.shift_down": "Stone <-> Stone Bricks",
+  "tooltip.tutorialmod.chisel.tooltip.shift_down.1": "Endstone <-> Endstone Bricks",
+
+  "tooltip.tutorialmod.cauliflower": "Eat for a health boost!"
 }
