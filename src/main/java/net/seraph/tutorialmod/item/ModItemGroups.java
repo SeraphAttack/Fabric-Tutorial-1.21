@@ -49,6 +49,8 @@ public class ModItemGroups {
 
                         entries.add(ModBlocks.MAGIC_BLOCK);
 
+                        entries.add(ModBlocks.PINK_GARNET_LAMP);
+
                     }).build());
 
     public static void registerItemGroups() {
