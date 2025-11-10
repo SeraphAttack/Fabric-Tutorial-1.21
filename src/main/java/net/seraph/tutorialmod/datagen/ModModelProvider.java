@@ -3,6 +3,7 @@ package net.seraph.tutorialmod.datagen;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricModelProvider;
 import net.minecraft.data.client.*;
+import net.minecraft.item.ArmorItem;
 import net.minecraft.util.Identifier;
 import net.seraph.tutorialmod.block.ModBlocks;
 import net.seraph.tutorialmod.block.custom.PinkGarnetLampBlock;
@@ -56,6 +57,11 @@ public class ModModelProvider extends FabricModelProvider {
         itemModelGenerator.register(ModItems.PINK_GARNET_HOE, Models.HANDHELD);
 
         itemModelGenerator.register(ModItems.PINK_GARNET_HAMMER, Models.HANDHELD);
+
+        itemModelGenerator.registerArmor(((ArmorItem) ModItems.PINK_GARNET_HELMET));
+        itemModelGenerator.registerArmor(((ArmorItem) ModItems.PINK_GARNET_CHESTPLATE));
+        itemModelGenerator.registerArmor(((ArmorItem) ModItems.PINK_GARNET_LEGGINGS));
+        itemModelGenerator.registerArmor(((ArmorItem) ModItems.PINK_GARNET_BOOTS));
 
     }
 }
