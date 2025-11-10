@@ -27,6 +27,8 @@ public class ModItemGroups {
 
                         entries.add(ModItems.PINK_GARNET_HAMMER);
 
+                        entries.add(ModItems.SERAPH_BOW);
+
                         entries.add(ModItems.PINK_GARNET_HELMET);
                         entries.add(ModItems.PINK_GARNET_CHESTPLATE);
                         entries.add(ModItems.PINK_GARNET_LEGGINGS);
