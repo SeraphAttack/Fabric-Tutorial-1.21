@@ -16,6 +16,7 @@ import net.seraph.tutorialmod.block.ModBlocks;
 import net.seraph.tutorialmod.component.ModDataComponentTypes;
 import net.seraph.tutorialmod.item.ModItemGroups;
 import net.seraph.tutorialmod.item.ModItems;
+import net.seraph.tutorialmod.sound.ModSounds;
 import net.seraph.tutorialmod.util.HammerUsageEvent;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -32,6 +33,8 @@ public class TutorialMod implements ModInitializer {
         ModBlocks.registerModBlocks();
 
         ModDataComponentTypes.registerDataComponentTypes();
+
+        ModSounds.registerSounds();
 
         FuelRegistry.INSTANCE.add(ModItems.STARLIGHT_ASHES, 600);
 
