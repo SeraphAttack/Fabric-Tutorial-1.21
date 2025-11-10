@@ -4,6 +4,7 @@ import net.fabricmc.api.ModInitializer;
 
 import net.fabricmc.fabric.api.registry.FuelRegistry;
 import net.seraph.tutorialmod.block.ModBlocks;
+import net.seraph.tutorialmod.component.ModDataComponentTypes;
 import net.seraph.tutorialmod.item.ModItemGroups;
 import net.seraph.tutorialmod.item.ModItems;
 import org.slf4j.Logger;
@@ -19,6 +20,8 @@ public class TutorialMod implements ModInitializer {
 
         ModItems.registerModItems();
         ModBlocks.registerModBlocks();
+
+        ModDataComponentTypes.registerDataComponentTypes();
 
         FuelRegistry.INSTANCE.add(ModItems.STARLIGHT_ASHES, 600);
 	}
