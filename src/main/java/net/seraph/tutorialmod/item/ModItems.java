@@ -3,6 +3,7 @@ package net.seraph.tutorialmod.item;
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
 import net.minecraft.resource.featuretoggle.FeatureFlags;
 import net.seraph.tutorialmod.TutorialMod;
+import net.seraph.tutorialmod.block.ModBlocks;
 import net.seraph.tutorialmod.item.ModFoodComponents;
 import net.seraph.tutorialmod.item.custom.ChiselItem;
 import net.minecraft.item.*;
@@ -22,6 +23,7 @@ public class ModItems {
     public static final Item RAW_PINK_GARNET = registerItem("raw_pink_garnet", new Item(new Item.Settings()));
 
     public static final Item CHISEL = registerItem("chisel", new ChiselItem(new Item.Settings().maxDamage(32)));
+
     public static final Item CAULIFLOWER = registerItem("cauliflower", new Item(new Item.Settings().food(ModFoodComponents.CAULIFLOWER)) {
         @Override
         public void appendTooltip(ItemStack stack, TooltipContext context, List<Text> tooltip, TooltipType type) {
@@ -29,6 +31,8 @@ public class ModItems {
             super.appendTooltip(stack, context, tooltip, type);
         }
     });
+    public static final Item CAULIFLOWER_SEEDS = registerItem("cauliflower_seeds",
+            new AliasedBlockItem(ModBlocks.CAULIFLOWER_CROP, new Item.Settings()));
 
     public static final Item STARLIGHT_ASHES = registerItem("starlight_ashes", new Item(new Item.Settings()));
 

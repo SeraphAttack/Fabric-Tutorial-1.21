@@ -3,6 +3,7 @@ package net.seraph.tutorialmod.block;
 import com.ibm.icu.text.LocaleDisplayNames;
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
 import net.minecraft.block.*;
+import net.minecraft.block.piston.PistonBehavior;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemGroup;
@@ -14,6 +15,7 @@ import net.minecraft.util.Identifier;
 import net.minecraft.util.PathUtil;
 import net.minecraft.util.math.intprovider.UniformIntProvider;
 import net.seraph.tutorialmod.TutorialMod;
+import net.seraph.tutorialmod.block.custom.CauliflowerCropBlock;
 import net.seraph.tutorialmod.block.custom.MagicBlock;
 import net.seraph.tutorialmod.block.custom.PinkGarnetLampBlock;
 import net.seraph.tutorialmod.sound.ModSounds;
@@ -65,9 +67,17 @@ public class ModBlocks {
             new PinkGarnetLampBlock(AbstractBlock.Settings.create()
                     .strength(1f).requiresTool().luminance(state -> state.get(PinkGarnetLampBlock.CLICKED) ? 15 : 0)));
 
+    public static final Block CAULIFLOWER_CROP = registerBlockWithoutBlockItem("cauliflower_crop",
+            new CauliflowerCropBlock(AbstractBlock.Settings.create().noCollision()
+                    .ticksRandomly().breakInstantly().sounds(BlockSoundGroup.CROP).pistonBehavior(PistonBehavior.DESTROY).mapColor(MapColor.DARK_GREEN)));
+
 
     private static Block registerBlock(String name, Block block) {
         registerBlockItem(name, block);
+        return Registry.register(Registries.BLOCK, Identifier.of(TutorialMod.MOD_ID, name), block);
+    }
+
+    private static Block registerBlockWithoutBlockItem(String name, Block block) {
         return Registry.register(Registries.BLOCK, Identifier.of(TutorialMod.MOD_ID, name), block);
     }
 
