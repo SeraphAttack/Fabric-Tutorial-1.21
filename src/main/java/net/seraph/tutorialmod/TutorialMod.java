@@ -14,6 +14,7 @@ import net.minecraft.text.Text;
 import net.minecraft.util.ActionResult;
 import net.seraph.tutorialmod.block.ModBlocks;
 import net.seraph.tutorialmod.component.ModDataComponentTypes;
+import net.seraph.tutorialmod.effect.ModEffects;
 import net.seraph.tutorialmod.item.ModItemGroups;
 import net.seraph.tutorialmod.item.ModItems;
 import net.seraph.tutorialmod.sound.ModSounds;
@@ -35,6 +36,8 @@ public class TutorialMod implements ModInitializer {
         ModDataComponentTypes.registerDataComponentTypes();
 
         ModSounds.registerSounds();
+
+        ModEffects.registerEffects();
 
         FuelRegistry.INSTANCE.add(ModItems.STARLIGHT_ASHES, 600);
 

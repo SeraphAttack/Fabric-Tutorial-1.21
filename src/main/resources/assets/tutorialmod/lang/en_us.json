@@ -64,5 +64,7 @@
   "tooltip.tutorialmod.cauliflower": "Eat for a health boost!",
 
   "trim_material.tutorialmod.pink_garnet": "Pink Garnet Material",
-  "trim_pattern.tutorialmod.kaupen": "Kaupen Armor Pattern"
+  "trim_pattern.tutorialmod.kaupen": "Kaupen Armor Pattern",
+
+  "effect.tutorialmod.slimey": "Slimey"
 }
