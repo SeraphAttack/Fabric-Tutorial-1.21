@@ -4,12 +4,14 @@ import net.fabricmc.api.ModInitializer;
 
 import net.fabricmc.fabric.api.event.player.AttackEntityCallback;
 import net.fabricmc.fabric.api.event.player.PlayerBlockBreakEvents;
+import net.fabricmc.fabric.api.registry.FabricBrewingRecipeRegistryBuilder;
 import net.fabricmc.fabric.api.registry.FuelRegistry;
 import net.minecraft.block.EndRodBlock;
 import net.minecraft.entity.effect.StatusEffectInstance;
 import net.minecraft.entity.effect.StatusEffects;
 import net.minecraft.entity.passive.SheepEntity;
 import net.minecraft.item.Items;
+import net.minecraft.potion.Potions;
 import net.minecraft.text.Text;
 import net.minecraft.util.ActionResult;
 import net.seraph.tutorialmod.block.ModBlocks;
@@ -17,6 +19,7 @@ import net.seraph.tutorialmod.component.ModDataComponentTypes;
 import net.seraph.tutorialmod.effect.ModEffects;
 import net.seraph.tutorialmod.item.ModItemGroups;
 import net.seraph.tutorialmod.item.ModItems;
+import net.seraph.tutorialmod.potion.ModPotions;
 import net.seraph.tutorialmod.sound.ModSounds;
 import net.seraph.tutorialmod.util.HammerUsageEvent;
 import org.slf4j.Logger;
@@ -39,19 +42,25 @@ public class TutorialMod implements ModInitializer {
 
         ModEffects.registerEffects();
 
+        ModPotions.registerPotions();
+
         FuelRegistry.INSTANCE.add(ModItems.STARLIGHT_ASHES, 600);
 
         PlayerBlockBreakEvents.BEFORE.register(new HammerUsageEvent());
         AttackEntityCallback.EVENT.register((player, world, hand, entity, hitResult) -> {
             if (entity instanceof SheepEntity sheepEntity && !world.isClient) {
                 if (player.getMainHandStack().getItem() == Items.END_ROD) {
-                    player.sendMessage(Text.literal("I FUCK SHEEP!!!"));
+                    player.sendMessage(Text.literal("Don't judge me"));
                     player.getMainHandStack().decrement(1);
                     sheepEntity.addStatusEffect(new StatusEffectInstance(StatusEffects.NAUSEA, 600));
                 }
                 return ActionResult.PASS;
             }
             return ActionResult.PASS;
+        });
+
+        FabricBrewingRecipeRegistryBuilder.BUILD.register(builder -> {
+            builder.registerPotionRecipe(Potions.AWKWARD, Items.SLIME_BALL, ModPotions.SLIMEY_POTION);
         });
 	}
 }
