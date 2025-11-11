@@ -28,7 +28,10 @@
 
   "item.tutorialmod.cauliflower": "Cauliflower",
   "item.tutorialmod.cauliflower_seeds": "Cauliflower Seeds",
-  "item.tutorialmod.cauliflower_crop": "Cauliflower Crop",
+  "block.tutorialmod.cauliflower_crop": "Cauliflower Crop",
+
+  "item.tutorialmod.honey_berries": "Honey Berries",
+  "block.tutorialmod.honey_berry_bush": "Honey Berry Bush",
 
   "item.minecraft.potion.effect.slimey_potion": "Slimey Potion",
   "item.minecraft.splash_potion.effect.slimey_potion": "Slimey Splash Potion",

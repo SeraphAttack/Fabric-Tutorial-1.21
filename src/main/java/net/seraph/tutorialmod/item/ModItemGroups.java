@@ -44,6 +44,7 @@ public class ModItemGroups {
 
                         entries.add(ModItems.CAULIFLOWER);
                         entries.add(ModItems.CAULIFLOWER_SEEDS);
+                        entries.add(ModItems.HONEY_BERRIES);
 
                         entries.add(ModItems.STARLIGHT_ASHES);
                     }).build());
