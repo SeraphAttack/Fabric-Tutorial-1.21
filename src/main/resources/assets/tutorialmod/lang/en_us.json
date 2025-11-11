@@ -79,5 +79,7 @@
   "trim_material.tutorialmod.pink_garnet": "Pink Garnet Material",
   "trim_pattern.tutorialmod.kaupen": "Kaupen Armor Pattern",
 
-  "effect.tutorialmod.slimey": "Slimey"
+  "effect.tutorialmod.slimey": "Slimey",
+
+  "enchantment.tutorialmod.lightning_striker": "Lightning Striker"
 }

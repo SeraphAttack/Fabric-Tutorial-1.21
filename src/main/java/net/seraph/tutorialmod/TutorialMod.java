@@ -17,6 +17,8 @@ import net.minecraft.util.ActionResult;
 import net.seraph.tutorialmod.block.ModBlocks;
 import net.seraph.tutorialmod.component.ModDataComponentTypes;
 import net.seraph.tutorialmod.effect.ModEffects;
+import net.seraph.tutorialmod.enchantment.ModEnchantmentEffects;
+import net.seraph.tutorialmod.enchantment.ModEnchantments;
 import net.seraph.tutorialmod.item.ModItemGroups;
 import net.seraph.tutorialmod.item.ModItems;
 import net.seraph.tutorialmod.potion.ModPotions;
@@ -43,6 +45,8 @@ public class TutorialMod implements ModInitializer {
         ModEffects.registerEffects();
 
         ModPotions.registerPotions();
+
+        ModEnchantmentEffects.registerEnchantmentEffects();
 
         FuelRegistry.INSTANCE.add(ModItems.STARLIGHT_ASHES, 600);
 
