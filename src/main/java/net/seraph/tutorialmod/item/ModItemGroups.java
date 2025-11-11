@@ -38,6 +38,8 @@ public class ModItemGroups {
 
                         entries.add(ModItems.KAUPEN_SMITHING_TEMPLATE);
 
+                        entries.add(ModItems.BAR_BRAWL_MUSIC_DISC);
+
                         entries.add(ModItems.CHISEL);
 
                         entries.add(ModItems.CAULIFLOWER);

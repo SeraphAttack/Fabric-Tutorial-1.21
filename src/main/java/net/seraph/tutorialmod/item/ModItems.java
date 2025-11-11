@@ -13,6 +13,7 @@ import net.minecraft.text.Text;
 import net.minecraft.util.Identifier;
 import net.seraph.tutorialmod.item.custom.HammerItem;
 import net.seraph.tutorialmod.item.custom.ModArmorItem;
+import net.seraph.tutorialmod.sound.ModSounds;
 
 import java.util.List;
 
@@ -53,6 +54,9 @@ public class ModItems {
 
     public static final Item SERAPH_BOW = registerItem("seraph_bow",
             new BowItem(new Item.Settings().maxDamage(500)));
+
+    public static final Item BAR_BRAWL_MUSIC_DISC = registerItem("bar_brawl_music_disc",
+            new Item(new Item.Settings().jukeboxPlayable(ModSounds.BAR_BRAWL_KEY).maxCount(1)));
 
     public static final Item PINK_GARNET_HELMET = registerItem("pink_garnet_helmet",
             new ModArmorItem(ModArmorMaterials.PINK_GARNET_ARMOR_MATERIAL, ArmorItem.Type.HELMET, new Item.Settings().
